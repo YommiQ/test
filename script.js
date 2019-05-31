@@ -1,25 +1,20 @@
 'use strict';
 
-var number = 5;
-var string = "Hello";
-var symbol = Symbol();
-var boolean = true;
-null;
-undefined;
-var obj = {};
+let money = prompt("Ваш бюджет на месяц?");
+let date = prompt("Введите дату в формате YYYY-MM-DD");
 
-let person = {
-    name: "Jhon",
-    age: 25,
-    isMarried: false
-}
+let appData = {
+    budget: money,
+    timeData: date,
+    expenses: {},
+    optionalExpenses: {},
+    income: [],
+    savings: false
+};
 
-console.log(person.age);
-console.log(null == undefined)
-console.log(null === undefined)
+let q1 = prompt("Введите обязательную статью расходов в этом месяце");
+let a1 = prompt("Во сколько обойдется?");
 
-let array = ['plum.png', 'orange.jpg', 'apple.bmp'];
+appData.expenses.q1 = a1;
 
-console.log(array[0]);
-console.log(typeof(null));
-console.log(typeof(undefined));
+alert(appData.budget / 30);
